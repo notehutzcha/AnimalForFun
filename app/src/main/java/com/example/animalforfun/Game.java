@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Game extends AppCompatActivity {
-
+    //global
     ImageView questionImageView;
     ImageButton volumeImageButton;
     Button btn1, btn2, btn3, btn4;
