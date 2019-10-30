@@ -26,6 +26,8 @@ public class Game extends AppCompatActivity {
     String answer;
     MediaPlayer mediaPlayer;
     int score = 0 ;
+    String getNameString;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -235,9 +237,11 @@ public class Game extends AppCompatActivity {
     }//end choiceAns() method
 
     private void dialogboxScore() {
+        getNameString = getIntent().getStringExtra("Name");
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Summary score!!");
-        builder.setMessage("คุณได้  "+score+" คะแนน")
+        builder.setMessage(getNameString+" ได้ "+score+" คะแนน")
                 .setCancelable(false)
                 .setPositiveButton("Play Again", new DialogInterface.OnClickListener() {
                     @Override
